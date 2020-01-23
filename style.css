@@ -16,9 +16,9 @@ form,
 
 .card {
     display: inline-block;
-    width: 50%;
-    height: 25%;
-    margin: 17% 25%;
+    width: 70%;
+    height: 40%;
+    margin: 10% 15%;
     border-radius: 10px;
 }
 
@@ -50,7 +50,7 @@ html {
 }
 
 .row {
-    margin: 7%;
+    margin-top:7%;
     text-align: center;
 }
 
@@ -79,7 +79,8 @@ select:hover {
 
 .button {
     align-items: center;
-    width: 25%;
+    width: 80%;
+    height: 20%;
     background-color: #2d767f;
     color: #ecfffb;
     font-size: 3vmin;
