@@ -1,7 +1,8 @@
-var fileSelect = document.getElementById("fileSelect");
-var fileElem = document.getElementById("fileElem");
-var fileDownload = document.getElementById("fileDownload");
-var nameSelect = document.getElementById("nameSelect");
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
+const fileDownload = document.getElementById("fileDownload");
+const nameSelect = document.getElementById("nameSelect");
+const defaultNameOption = document.getElementById("defaultNameOption");
 
 var fileSelected = false;
 var inputCSV;
@@ -97,6 +98,7 @@ function createPersonalSche() {
 
 //create options in select tags
 function createSelectTagsOptions() {
+    defaultNameOption.innerHTML="選你的名字喔";
     for (let entry of keyInfo.nameListWithIndex) {
         newOption = document.createElement("option");
         newOption.text = entry[0];
@@ -108,6 +110,7 @@ function createSelectTagsOptions() {
 
 //delete option in select tags
 function deleteSelectTagsOptions() {
+    defaultNameOption.innerHTML="先上傳檔案喔";
     do {
         options = document.getElementsByClassName("nameOption");
         for (let option of options) {
