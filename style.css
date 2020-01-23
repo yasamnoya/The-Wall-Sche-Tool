@@ -35,7 +35,7 @@ html {
 
 .header {
     text-align: center;
-    font-size: 4em;
+    font-size: 7vmin;
     font-family: 'Noto Sans TC', sans-serif;
     background-color: rgba(45, 118, 127, 90%);
     color: white;
@@ -64,7 +64,7 @@ select {
     color: #1e6262;
     background-color: #ecfffb;
     border: 3px solid #1e6262;
-    font-size: 1.3em;
+    font-size: 2.5vmin;
     border-radius: 100px;
     -webkit-transition-duration: 0.1s;
     /* Safari */
@@ -82,7 +82,7 @@ select:hover {
     width: 25%;
     background-color: #2d767f;
     color: #ecfffb;
-    font-size: 20pt;
+    font-size: 3vmin;
     padding: 10px;
     border: 3px solid #1e6262;
     border-radius: 15px;
