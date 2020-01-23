@@ -65,7 +65,7 @@ select {
     background-color: #ecfffb;
     border: 3px solid #1e6262;
     font-size: 2.5vmin;
-    border-radius: 100px;
+    border-radius: 10px;
     -webkit-transition-duration: 0.1s;
     /* Safari */
     transition-duration: 0.1s;
