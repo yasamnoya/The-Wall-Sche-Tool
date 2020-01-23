@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-*{
-  font-family: 'Noto Sans TC', sans-serif;
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 
@@ -8,8 +9,9 @@
     background-color: inherit;
 }
 
-form,.header{
-    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.5);
+form,
+.header {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -21,7 +23,7 @@ form,.header{
 }
 
 .container {
-    background-color: rgba(236, 255, 251,90%);
+    background-color: rgba(236, 255, 251, 90%);
     border-radius: 10px;
     padding: 5%
 }
@@ -57,40 +59,43 @@ html {
     margin-bottom: 0%;
 }
 
-select{
-    width:100%;
-    color:#1e6262;
-    background-color:#ecfffb;
+select {
+    width: 100%;
+    color: #1e6262;
+    background-color: #ecfffb;
     border: 3px solid #1e6262;
     font-size: 1.3em;
     border-radius: 100px;
-    -webkit-transition-duration: 0.1s;/* Safari */
+    -webkit-transition-duration: 0.1s;
+    /* Safari */
     transition-duration: 0.1s;
 }
 
-select:hover{
-    box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+select:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 
 .button {
     align-items: center;
-    width:25%;
+    width: 25%;
     background-color: #2d767f;
     color: #ecfffb;
     font-size: 20pt;
-    padding:10px;
+    padding: 10px;
     border: 3px solid #1e6262;
     border-radius: 15px;
-    -webkit-transition-duration: 0.1s;/* Safari */
+    -webkit-transition-duration: 0.1s;
+    /* Safari */
     transition-duration: 0.1s;
-    margin:0% 10%;
+    margin: 0% 10%;
 }
 
 .button:hover {
     background-color: #b4f1f1;
     cursor: pointer;
-    box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
