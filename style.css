@@ -4,6 +4,10 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+html {
+    background-image: url("https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif");
+    height: 100%;
+}
 
 ::selection {
     background-color: inherit;
@@ -18,7 +22,7 @@ form,
     display: inline-block;
     width: 70%;
     height: 40%;
-    margin: 10% 15%;
+    margin: 13% 15%;
     border-radius: 10px;
 }
 
@@ -28,10 +32,6 @@ form,
     padding: 5%
 }
 
-html {
-    background-image: url("https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif");
-    height: 100%;
-}
 
 .header {
     text-align: center;
@@ -50,7 +50,7 @@ html {
 }
 
 .row {
-    margin-top:7%;
+    margin-top:5%;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ html {
 }
 
 select {
-    width: 100%;
+    width: 75%;
     color: #1e6262;
     background-color: #ecfffb;
     border: 3px solid #1e6262;
@@ -79,8 +79,8 @@ select:hover {
 
 .button {
     align-items: center;
-    width: 80%;
-    height: 20%;
+    width:50%;
+    height: 30%;
     background-color: #2d767f;
     color: #ecfffb;
     font-size: 3vmin;
