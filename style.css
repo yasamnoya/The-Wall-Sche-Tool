@@ -1,0 +1,99 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+::selection {
+    background-color: inherit;
+}
+
+form,.header{
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    display: inline-block;
+    width: 50%;
+    height: 25%;
+    margin: 17% 25%;
+    border-radius: 10px;
+}
+
+.container {
+    background-color: rgba(236, 255, 251,90%);
+    border-radius: 10px;
+    padding: 5%
+}
+
+html {
+    background-image: url("https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif");
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: rgba(45, 118, 127, 90%);
+    color: white;
+    padding: 1%;
+    border-radius: 15px;
+    margin: -15% 0% 0% 0%;
+    padding: 3%;
+}
+
+.header:hover {
+    cursor: default;
+}
+
+.row {
+    margin: 7%;
+    text-align: center;
+}
+
+
+#buttonRow {
+    margin-bottom: 0%;
+}
+
+select{
+    width:100%;
+    color:#1e6262;
+    background-color:#ecfffb;
+    border: 3px solid #1e6262;
+    font-size: 1.3em;
+    border-radius: 100px;
+    -webkit-transition-duration: 0.1s;/* Safari */
+    transition-duration: 0.1s;
+}
+
+select:hover{
+    box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+}
+
+
+.button {
+    align-items: center;
+    width:25%;
+    background-color: #2d767f;
+    color: #ecfffb;
+    font-size: 20pt;
+    padding:10px;
+    border: 3px solid #1e6262;
+    border-radius: 15px;
+    -webkit-transition-duration: 0.1s;/* Safari */
+    transition-duration: 0.1s;
+    margin:0% 10%;
+}
+
+.button:hover {
+    background-color: #b4f1f1;
+    cursor: pointer;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.button:active {
+    background-color: #2d767f;
+}
+
+body {
+    color: black;
+}

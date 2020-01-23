@@ -1,0 +1,32 @@
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>The Wall Sche</title>
+</head>
+
+<body>
+    <input type="file" id="fileElem" accept=".csv" style="display:none">
+    <div class="card">
+        <form class="container">
+            <div class="header">惹沃班表小工具</div>
+            <div class="row" id="nameSelect row">
+                <select id="nameSelect">
+                    <option selected disabled value="-1">選你的名字喔</option>
+                </select>
+            </div>
+            <div class="row"></div>
+            <div class="row" id="buttonRow">
+                <button class=button id="fileSelect" value="select">上傳檔案</button>
+                <button class=button id="fileDownload">下載班表</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="papaparse.js"></script>
+    <script type="text/javascript" src="sche.js"></script>
+</body>
+
+</html>
