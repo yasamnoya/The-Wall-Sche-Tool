@@ -6,6 +6,7 @@
 
 html {
     background-image: url("https://media.giphy.com/media/e5xL4bU0ETgLm/giphy.gif");
+    background-size: 25%;
     height: 100%;
 }
 
@@ -50,7 +51,7 @@ form,
 }
 
 .row {
-    margin-top:5%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -79,7 +80,7 @@ select:hover {
 
 .button {
     align-items: center;
-    width:50%;
+    width: 50%;
     height: 30%;
     background-color: #2d767f;
     color: #ecfffb;
@@ -105,4 +106,23 @@ select:hover {
 
 body {
     color: black;
+}
+
+@media screen and (max-width:1280px) {
+    html {
+        background-size: 33.3%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        background-size: 50%;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    html {
+        background-size: 100%;
+    }
 }
