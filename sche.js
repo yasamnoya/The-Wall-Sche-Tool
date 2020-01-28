@@ -224,7 +224,8 @@ fileDownload.addEventListener("click", (e) => {
         personalSche = createPersonalSche();
         outputCSV = Papa.unparse(personalSche);
 
-        var filename = keyInfo.year + " " + keyInfo.month + "月The Wall班表.csv";
+        var name=nameSelect.options[nameSelect.selectedIndex].text;
+        var filename = `${keyInfo.year} ${keyInfo.month}月The Wall班表-${name}.csv`;
         var outputFile = new File([outputCSV], filename, {
             type: "text/plain;charset=utf-8"
         });
