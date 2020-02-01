@@ -32,29 +32,18 @@ function isWorkDay(block) {
     }
 }
 
-function longestString(strArray) {
-    var longest = "";
-    for (let str of strArray) {
-        if (str.length > longest.length) {
-            longest = str;
-        }
-    }
-    return longest;
-}
 
 //determinate the begin and the end time
 function findBeginEnd(block) {
-    block = block.split(" ");
-    block = longestString(block);
-    block = block.split("-");
-    var begin = block[0];
-    var end = block[1];
+    var indexOfHyphen =block.indexOf("-");
+    begin= block.substring(Math.max(indexOfHyphen - 5,0), indexOfHyphen) //for 1 digit of hr
+    end = block.substring(indexOfHyphen +1,indexOfHyphen+6);
     var indexOfBeginColon = begin.indexOf(":");
     var indexOfEndColon = end.indexOf(":");
-    var beginHr = begin.substring(0, indexOfBeginColon);
-    var beginMin = begin.substring(indexOfBeginColon + 1, begin.length);
-    var endHr = end.substring(0, indexOfEndColon);
-    var endMin = end.substring(indexOfEndColon + 1, end.length);
+    var beginHr = begin.substring(Math.max(indexOfBeginColon - 2,0), indexOfBeginColon);
+    var beginMin = begin.substring(indexOfBeginColon + 1, indexOfBeginColon + 3);
+    var endHr = end.substring(Math.max(indexOfEndColon - 2,0), indexOfEndColon);
+    var endMin = end.substring(indexOfEndColon + 1, indexOfEndColon + 3);
     return [beginHr, beginMin, endHr, endMin];
 }
 
@@ -98,7 +87,7 @@ function createPersonalSche() {
 
 //create options in select tags
 function createSelectTagsOptions() {
-    defaultNameOption.innerHTML="選你的名字喔";
+    defaultNameOption.innerHTML = "選你的名字喔";
     for (let entry of keyInfo.nameListWithIndex) {
         newOption = document.createElement("option");
         newOption.text = entry[0];
@@ -110,13 +99,13 @@ function createSelectTagsOptions() {
 
 //delete option in select tags
 function deleteSelectTagsOptions() {
-    defaultNameOption.innerHTML="先上傳檔案喔";
+    defaultNameOption.innerHTML = "先上傳檔案喔";
     do {
         options = document.getElementsByClassName("nameOption");
         for (let option of options) {
             option.remove();
         }
-    }while(options.length);
+    } while (options.length);
 }
 
 //get year from filename
@@ -224,7 +213,7 @@ fileDownload.addEventListener("click", (e) => {
         personalSche = createPersonalSche();
         outputCSV = Papa.unparse(personalSche);
 
-        var name=nameSelect.options[nameSelect.selectedIndex].text;
+        var name = nameSelect.options[nameSelect.selectedIndex].text;
         var filename = `${keyInfo.year} ${keyInfo.month}月The Wall班表-${name}.csv`;
         var outputFile = new File([outputCSV], filename, {
             type: "text/plain;charset=utf-8"
