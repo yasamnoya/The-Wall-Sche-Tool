@@ -143,7 +143,7 @@ function getNameList(inputCSV) {
     }
     try {
         var indexOfName = possiblyNameList.indexOf("姓名");
-        var indexOfAssist = possiblyNameList.indexOf("此線以下為代打  須經Jemp同意再找");
+        var indexOfAssist = possiblyNameList.indexOf("此線以下為代打  須經同意再找");
         var indexOfNumberOfTBs = possiblyNameList.indexOf("當日需上班人數");
         var regularList = possiblyNameList.slice(indexOfName + 1, indexOfAssist);
         var AssistList = possiblyNameList.slice(indexOfAssist + 1, indexOfNumberOfTBs);
