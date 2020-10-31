@@ -32,20 +32,29 @@ function isWorkDay(block) {
     }
 }
 
+function findHrMin(timeString) {
+    timeString = timeString.trim()
+    timeString = timeString.replace("：", ":") //for fullwidth colon
+    var splitedTime = timeString.split(":")
+    var hr = splitedTime[0].trim()
+    var min = splitedTime[1].trim()
+
+    //for hr of 1 digit
+    if(hr.length == 1){
+        hr = "0" + hr
+    }
+    return [hr, min]
+}
+
 
 //determinate the begin and the end time
 function findBeginEnd(block) {
-    block.replace("：", ":")
-    var indexOfHyphen =block.indexOf("-");
-    begin= block.substring(Math.max(indexOfHyphen - 5,0), indexOfHyphen) //for 1 digit of hr
-    end = block.substring(indexOfHyphen +1,indexOfHyphen+6);
-    var indexOfBeginColon = begin.indexOf(":");
-    var indexOfEndColon = end.indexOf(":");
-    var beginHr = begin.substring(Math.max(indexOfBeginColon - 2,0), indexOfBeginColon);
-    var beginMin = begin.substring(indexOfBeginColon + 1, indexOfBeginColon + 3);
-    var endHr = end.substring(Math.max(indexOfEndColon - 2,0), indexOfEndColon);
-    var endMin = end.substring(indexOfEndColon + 1, indexOfEndColon + 3);
-    return [beginHr, beginMin, endHr, endMin];
+    block = block.trim()
+    var splitedBlock = block.split("-")
+    var begin = splitedBlock[0]
+    var end = splitedBlock[1]
+
+    return findHrMin(begin).concat(findHrMin(end))
 }
 
 //col by col create Personal Schedule
