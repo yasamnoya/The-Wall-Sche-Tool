@@ -35,6 +35,7 @@ function isWorkDay(block) {
 
 //determinate the begin and the end time
 function findBeginEnd(block) {
+    block.replace("：", ":")
     var indexOfHyphen =block.indexOf("-");
     begin= block.substring(Math.max(indexOfHyphen - 5,0), indexOfHyphen) //for 1 digit of hr
     end = block.substring(indexOfHyphen +1,indexOfHyphen+6);
