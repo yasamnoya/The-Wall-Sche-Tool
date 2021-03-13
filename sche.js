@@ -53,6 +53,18 @@ function findBeginEnd(block) {
     var splitedBlock = block.split("-")
     var begin = splitedBlock[0]
     var end = splitedBlock[1]
+		console.log(begin, end)
+
+	//cleaning for leading or tailing words
+	//e.g. Bar X, 1800
+		if(begin.indexOf(" ") != -1) {
+			splitedBegin = begin.split(" ")
+			begin = splitedBegin[splitedBegin.length - 1]
+		}
+		if (end.indexOf(" ") != -1){
+			splitedEnd = end.split(" ")
+			end = splitedEnd[splitedEnd.length - 1]
+		}
 
     return findHrMin(begin).concat(findHrMin(end))
 }
