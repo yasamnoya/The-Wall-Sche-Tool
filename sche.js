@@ -154,6 +154,15 @@ function getMonth(inputCSV) {
     }
 }
 
+//get the index of last name in name list
+function getIndexOfAssist(possiblyNameList) {
+	for (const [i, e] of possiblyNameList.entries()){
+		if (e.includes("此線以下為代打")){
+			return i;
+		}
+	}
+}
+
 //get name list from input csv
 function getNameList(inputCSV) {
     var nameList = [];
@@ -165,7 +174,7 @@ function getNameList(inputCSV) {
     }
     try {
         var indexOfName = possiblyNameList.indexOf("姓名");
-        var indexOfAssist = possiblyNameList.indexOf("此線以下為代打  須經同意再找");
+        var indexOfAssist = getIndexOfAssist(possiblyNameList)
         var indexOfNumberOfTBs = possiblyNameList.indexOf("當日需上班人數");
         var regularList = possiblyNameList.slice(indexOfName + 1, indexOfAssist);
         var AssistList = possiblyNameList.slice(indexOfAssist + 1, indexOfNumberOfTBs);
